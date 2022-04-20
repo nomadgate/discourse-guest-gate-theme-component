@@ -1,0 +1,48 @@
+guest_gate_enabled:
+  type: bool
+  default: true
+max_guest_topic_views:
+  type: string
+  default: "1"
+x_button_disabled:
+  type: bool
+  default: false
+use_gate_buttons:
+  type: bool
+  default: false
+  description: Use buttons instead of text.
+redirect_to_home:
+  type: bool
+  default: false
+  description: Redirect the visitor after click the Login or Signup button to the homepage and open Login or Signup modal.
+gate_footer_position:
+  default: center
+  type: enum
+  choices:
+    - left
+    - right
+  description: Footer buttons position.
+gate_show_only_once:
+  type: bool
+  default: false
+custom_gate_enabled:
+  type: bool
+  default: false
+custom_gate_image_url:
+  type: string
+  default: ""
+custom_gate_image_width:
+  type: string
+  default: "150px"
+custom_gate_big_text_color:
+  type: string
+  default: "var(--primary)"
+custom_gate_little_text_color:
+  type: string
+  default: "var(--primary)"
+custom_gate_background_color:
+  type: string
+  default: "var(--secondary)"
+custom_gate_link_color:
+  type: string
+  default: "var(--primary-medium)"
