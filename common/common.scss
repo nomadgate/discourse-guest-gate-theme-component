@@ -1,3 +1,7 @@
-#discourse-modal.gate {
-  display: none;
+#discourse-modal {
+  &.discard-draft-modal {
+    .modal-header {
+      display: none;
+    }
+  }
 }
