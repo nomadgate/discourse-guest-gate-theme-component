@@ -6,8 +6,6 @@ export default DiscourseModalComponent.extend({
   attributeBindings: ["data-keyboard"],
 
   dismissable: false,
-  'data-keyboard': 'true',
-
 
   @on("didInsertElement")
   setUp() {
