@@ -1,12 +1,13 @@
-import { on } from "ember-addons/ember-computed-decorators";
-import DiscourseModal from "discourse/components/d-modal";
+import { on } from "discourse-common/utils/decorators";
+import DiscourseModalComponent from "discourse/components/d-modal";
 
-export default DiscourseModal.extend({
-  classNameBindings: [':gate'],
-  attributeBindings: ['data-keyboard'],
+export default DiscourseModalComponent.extend({
+  classNameBindings: [":gate"],
+  attributeBindings: ["data-keyboard"],
 
   dismissable: false,
   'data-keyboard': 'true',
+
 
   @on("didInsertElement")
   setUp() {
@@ -22,8 +23,8 @@ export default DiscourseModal.extend({
     });
 
     $('html').on('keydown.discourse-modal', e => {
-      if ((e.which === 27) && $('.modal-header a.close').is(":visible")) {
-        Em.run.next(() => $('.modal-header a.close').click());
+      if ((e.which === 27) && $('.modal-header .close').is(":visible")) {
+        Em.run.next(() => $('.modal-header .close').click());
       }
     });
   },
@@ -32,11 +33,11 @@ export default DiscourseModal.extend({
     const $target = $(e.target);
     if (($target.hasClass("modal-middle-container") ||
         $target.hasClass("modal-outer-container")) &&
-	$('.modal-header a.close').is(":visible")) {
+	$('.modal-header .close').is(":visible")) {
       // Delegate click to modal close if clicked outside.
       // We do this because some CSS of ours seems to cover
       // the backdrop and makes it unclickable.
-      $('.modal-header a.close').click();
+      $('.modal-header .close').click();
     }
   }
 });
