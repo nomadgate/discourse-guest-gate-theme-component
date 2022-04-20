@@ -28,8 +28,8 @@ gate_show_only_once:
 custom_gate_enabled:
   type: bool
   default: false
-custom_gate_image_url:
-  type: string
+custom_gate_image:
+  type: upload
   default: ""
 custom_gate_image_width:
   type: string
