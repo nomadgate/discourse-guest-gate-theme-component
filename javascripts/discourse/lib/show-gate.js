@@ -1,7 +1,7 @@
 export default function(name, opts) {
   opts = opts || {};
   const container = Discourse.__container__;
-
+   
   // We use the container here because modals are like singletons
   // in Discourse. Only one can be shown with a particular state.
   const route = container.lookup('route:application');
