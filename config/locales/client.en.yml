@@ -1,9 +1,0 @@
-en:
-  js:
-    guest_gate:
-      modal:
-        title: "Please Sign Up!"
-        sign_up_email: "Sign Up with Email"
-        sign_up: "Sign Up"
-        log_in: "I already have an account"
-        or: "or"
