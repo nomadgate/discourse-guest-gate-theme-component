@@ -1,5 +1,5 @@
 {{#if (theme-setting 'dismissable_false')}}
-  {{#d-modal-body title=(theme-prefix 'guest_gate.title') class="guest-gate" dismissable=false}}
+  {{#d-modal-body title=(theme-prefix 'guest_gate.title') dismissable=false}}
     {{#if (theme-setting 'custom_gate_enabled') }}
       <div class="custom-gate">
         <img src="{{theme-setting 'custom_gate_image'}}"/>
@@ -15,7 +15,7 @@
     {{login-buttons externalLogin=(action "externalLogin")}}  
   {{/d-modal-body}}
   {{else}}
-  {{#d-modal-body title=(theme-prefix 'guest_gate.title') class="guest-gate"}}
+  {{#d-modal-body title=(theme-prefix 'guest_gate.title')}}
     {{#if (theme-setting 'custom_gate_enabled') }}
       <div class="custom-gate">
         <img src="{{theme-setting 'custom_gate_image'}}"/>
