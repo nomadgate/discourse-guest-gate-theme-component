@@ -1,75 +1,36 @@
-{{#d-modal-body title=(theme-prefix 'guest_gate.title') class="guest-gate"}}
-  {{#if (theme-setting 'custom_gate_enabled') }}
-    <div class="custom-gate">
-      <img src="{{theme-setting 'custom_gate_image'}}"/>
-      <h2 style="color: {{theme-setting 'custom_gate_big_text_color'}};">
-        {{theme-i18n "custom_gate.big_text"}}
-      </h2>
-      <p style="color: {{theme-setting 'custom_gate_little_text_color'}};">
-        {{theme-i18n "custom_gate.little_text"}}
-      </p>
-    </div>
-    <style type="text/css">
-      .guest-gate {
-        padding: 0 1em !important;
-      }
-      .custom-gate {
-        text-align: center;
-      }
-      .custom-gate img {
-        width: {{theme-setting 'custom_gate_image_width'}};
-        height: auto;
-        margin-bottom: 0.75em;
-      }
-      .modal-footer {
-        color: {{theme-setting 'custom_gate_link_color'}} !important;
-      }
-      .modal-footer a {
-        color: {{theme-setting 'custom_gate_link_color'}} !important;
-      }
-      .modal-inner-container {
-        background-color: {{theme-setting 'custom_gate_background_color'}} !important;
-      }
-    </style>
-    {{else}}
-    <div>
-      <p>{{replace-emoji (i18n 'signup_cta.intro')}}</p>
-      <p>{{replace-emoji (i18n 'signup_cta.value_prop')}}</p>
-    </div>
-  {{/if}}
-  <style type="text/css">
-    .gate .modal-header {
-      border-bottom: none;
-    }
-    .gate .modal-header .close {
-      {{#if (theme-setting 'x_button_disabled')}}
-        display: none;
-        {{else}}
-        margin-top: 15px;
-      {{/if}}
-    }
-    #login-buttons {
-      margin-bottom: 0;
-      text-align: center;
-    }
-    .mobile-view #login-buttons {
-      width: 100%;
-    }
-    .mobile-view .btn-social {
-      width: 100%;
-      margin-top: 3px;
-    }
-    .modal-footer {
-      justify-content: {{theme-setting 'gate_footer_position'}};
-    }
-    .modal-footer a {
-      color: #787878;
-      margin: 0 0.25em;
-      outline: none;
-    }
-  </style>
-  {{login-buttons externalLogin=(action "externalLogin")}}  
-{{/d-modal-body}}
+{{#if (theme-setting 'dismissable_false')}}
+  {{#d-modal-body title=(theme-prefix 'guest_gate.title') dismissable=false}}
+    {{#if (theme-setting 'custom_gate_enabled') }}
+      <div class="custom-gate">
+        <img src="{{theme-setting 'custom_gate_image'}}"/>
+        <h2>{{theme-i18n "custom_gate.big_text"}}</h2>
+        <p>{{theme-i18n "custom_gate.little_text"}}</p>
+      </div>
+      {{else}}
+      <div>
+        <p>{{replace-emoji (i18n 'signup_cta.intro')}}</p>
+        <p>{{replace-emoji (i18n 'signup_cta.value_prop')}}</p>
+      </div>
+    {{/if}}
+    {{login-buttons externalLogin=(action "externalLogin")}}  
+  {{/d-modal-body}}
+  {{else}}
+  {{#d-modal-body title=(theme-prefix 'guest_gate.title')}}
+    {{#if (theme-setting 'custom_gate_enabled') }}
+      <div class="custom-gate">
+        <img src="{{theme-setting 'custom_gate_image'}}"/>
+        <h2>{{theme-i18n "custom_gate.big_text"}}</h2>
+        <p>{{theme-i18n "custom_gate.little_text"}}</p>
+      </div>
+      {{else}}
+      <div>
+        <p>{{replace-emoji (i18n 'signup_cta.intro')}}</p>
+        <p>{{replace-emoji (i18n 'signup_cta.value_prop')}}</p>
+      </div>
+    {{/if}}
+    {{login-buttons externalLogin=(action "externalLogin")}}  
+  {{/d-modal-body}}
+{{/if}}
 
 <div class="modal-footer">
   {{#if ssoEnabled}}
