@@ -4,7 +4,7 @@ guest_gate_enabled:
 max_guest_topic_views:
   type: string
   default: "1"
-x_button_disabled:
+dismissable_false:
   type: bool
   default: false
 use_gate_buttons:
