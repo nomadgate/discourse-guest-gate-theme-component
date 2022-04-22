@@ -1,4 +1,4 @@
-{{#d-modal-body title=(theme-prefix 'guest_gate.title') class="guest-gate"}}
+{{#d-modal-body title=(theme-prefix 'guest_gate.title') class="guest-gate" dismissable=false}}
   {{#if (theme-setting 'custom_gate_enabled') }}
     <div class="custom-gate">
       <img src="{{theme-setting 'custom_gate_image'}}"/>
