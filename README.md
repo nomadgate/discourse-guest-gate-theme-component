@@ -1,3 +1,5 @@
+## Guest Gate Theme Component
+
 **[See the theme component discussion here on Discourse](https://meta.discourse.org/t/guest-gate-theme-component/225107)**
 
 ### Short Description
