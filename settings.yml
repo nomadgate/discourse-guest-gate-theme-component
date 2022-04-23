@@ -4,13 +4,15 @@ guest_gate_enabled:
 max_guest_topic_views:
   type: string
   default: "1"
+  description: Number of topic views until gate displays. After the gate first appears, it appears randomly between 1 and this number.
 dismissable_false:
   type: bool
   default: false
+  description: Removes the close button and lock the modal so visitors can't close it.
 use_gate_buttons:
   type: bool
   default: false
-  description: Use buttons instead of text.
+  description: Use buttons on modal footer instead of links.
 redirect_to_home:
   type: bool
   default: false
@@ -21,10 +23,11 @@ gate_footer_position:
   choices:
     - left
     - right
-  description: Footer buttons position.
+  description: Footer buttons/links position.
 gate_show_only_once:
   type: bool
   default: false
+  description: Guest Gate modal show only once per session.
 custom_gate_enabled:
   type: bool
   default: false

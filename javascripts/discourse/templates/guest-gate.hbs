@@ -1,7 +1,7 @@
 {{#if (theme-setting 'dismissable_false')}}
   {{#d-modal-body title=(theme-prefix 'guest_gate.title') dismissable=false}}
     {{#if (theme-setting 'custom_gate_enabled') }}
-      <div class="custom-gate">
+      <div class="custom-gate-content">
         <img src="{{theme-setting 'custom_gate_image'}}"/>
         <h2>{{theme-i18n "custom_gate.big_text"}}</h2>
         <p>{{theme-i18n "custom_gate.little_text"}}</p>
@@ -17,11 +17,11 @@
   {{else}}
   {{#d-modal-body title=(theme-prefix 'guest_gate.title')}}
     {{#if (theme-setting 'custom_gate_enabled') }}
-      <div class="custom-gate">
+      <div class="custom-gate-content">
         <img src="{{theme-setting 'custom_gate_image'}}"/>
         <h2>{{theme-i18n "custom_gate.big_text"}}</h2>
         <p>{{theme-i18n "custom_gate.little_text"}}</p>
-      </div>
+      </div>     
       {{else}}
       <div>
         <p>{{replace-emoji (i18n 'signup_cta.intro')}}</p>
