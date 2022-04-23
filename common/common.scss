@@ -44,16 +44,21 @@
     }
   }
   #login-buttons {
-    margin-bottom: 0;
+    margin-bottom: 0.75em;
     text-align: center;
-    .mobile-view & {
-      width: 100%;
+    .btn-social {
+      margin: 0.25em;
+      .mobile-view & {
+        width: 100%;
+      }
+      &:focus,
+      &:hover {
+        background: var(--secondary);
+        color: var(--primary);
+      }
     }
-  }
-  .btn-social {
     .mobile-view & {
       width: 100%;
-      margin-top: 3px;
     }
   }
 }
