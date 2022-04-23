@@ -8,6 +8,10 @@ export default function(name, opts) {
   const modalController = route.controllerFor('modal');
 
   modalController.set('modalClass', 'gate');
+  
+  if (settings.custom_gate_enabled) {
+    modalController.set('modalClass', 'gate custom-gate');
+  }
 
   const controllerName = opts.admin ? `modals/${name}` : name;
 
