@@ -12,7 +12,12 @@
         <p>{{replace-emoji (i18n 'signup_cta.value_prop')}}</p>
       </div>
     {{/if}}
-    {{login-buttons externalLogin=(action "externalLogin")}}  
+    <div>
+      <h3>
+        <a href="/login">{{theme-i18n "guest_gate.log_in"}}</a>
+        <a href {{action "showLogin"}}>{{i18n 'log_in'}}</a> or sign up below:
+      </h3>
+    </div>
   {{/d-modal-body}}
   {{else}}
   {{#d-modal-body title=(theme-prefix 'guest_gate.title')}}
@@ -28,7 +33,7 @@
         <p>{{replace-emoji (i18n 'signup_cta.value_prop')}}</p>
       </div>
     {{/if}}
-    {{login-buttons externalLogin=(action "externalLogin")}}  
+    <iframe src="https://nomadgate.com/ext/su-frame/?ref=ngc-guest-gate-embed" height="150" width="400" referrerpolicy="unsafe-url" style="position:relative;border:0;width:100%;min-height:150px;"></iframe>
   {{/d-modal-body}}
 {{/if}}
 
