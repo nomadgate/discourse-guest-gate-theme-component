@@ -11,6 +11,9 @@
       }
     }
     .custom-gate-content {
+      > * {
+        margin-top: 0.5em;
+      }
       text-align: center;
       img {
         width: #{$custom_gate_image_width};
@@ -19,6 +22,10 @@
       }
       h2 {
         color: #{$custom_gate_big_text_color};
+        font-size: 1.75em;
+      }
+      h3 {
+        font-size: 1.5em;
       }
       p {
         color: #{$custom_gate_little_text_color};
