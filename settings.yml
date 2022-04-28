@@ -34,6 +34,9 @@ custom_gate_enabled:
 custom_gate_image:
   type: upload
   default: ""
+custom_gate_iframe_url:
+  type: string
+  default: "https://..."
 custom_gate_image_width:
   type: string
   default: "150px"

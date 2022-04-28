@@ -5,19 +5,15 @@
         <img src="{{theme-setting 'custom_gate_image'}}"/>
         <h2>{{theme-i18n "custom_gate.big_text"}}</h2>
         <p>{{theme-i18n "custom_gate.little_text"}}</p>
+        <h3><a {{action "showLogin"}}>{{theme-i18n "guest_gate.log_in"}}</a> {{theme-i18n "guest_gate.or"}} {{theme-i18n "guest_gate.sign_up"}}</h3>
+        <iframe src="{{theme-i18n "guest_gate.iframe"}}" height="150" width="400" referrerpolicy="unsafe-url" style="position:relative;border:0;width:100%;min-height:150px;"></iframe>
       </div>
-      {{else}}
+    {{else}}
       <div>
         <p>{{replace-emoji (i18n 'signup_cta.intro')}}</p>
         <p>{{replace-emoji (i18n 'signup_cta.value_prop')}}</p>
       </div>
     {{/if}}
-    <div>
-      <h3>
-        <a {{action "showLogin"}}>{{theme-i18n "guest_gate.log_in"}}</a> {{theme-i18n "guest_gate.or"}} {{theme-i18n "guest_gate.sign_up"}}
-      </h3>
-      <iframe src="https://nomadgate.com/ext/su-frame/?ref=ngc-guest-gate-embed" height="150" width="400" referrerpolicy="unsafe-url" style="position:relative;border:0;width:100%;min-height:150px;"></iframe>
-    </div>
   {{/d-modal-body}}
 {{else}}
   {{#d-modal-body title=(theme-prefix 'guest_gate.title')}}
@@ -26,18 +22,14 @@
         <img src="{{theme-setting 'custom_gate_image'}}"/>
         <h2>{{theme-i18n "custom_gate.big_text"}}</h2>
         <p>{{theme-i18n "custom_gate.little_text"}}</p>
+        <h3><a {{action "showLogin"}}>{{theme-i18n "guest_gate.log_in"}}</a> {{theme-i18n "guest_gate.or"}} {{theme-i18n "guest_gate.sign_up"}}</h3>
+        <iframe src="{{theme-i18n "guest_gate.iframe"}}" height="150" width="400" referrerpolicy="unsafe-url" style="position:relative;border:0;width:100%;min-height:150px;"></iframe>
       </div>
-      {{else}}
+    {{else}}
       <div>
         <p>{{replace-emoji (i18n 'signup_cta.intro')}}</p>
         <p>{{replace-emoji (i18n 'signup_cta.value_prop')}}</p>
       </div>
     {{/if}}
-    <div>
-      <h3>
-        <a {{action "showLogin"}}>{{theme-i18n "guest_gate.log_in"}}</a> {{theme-i18n "guest_gate.or"}} {{theme-i18n "guest_gate.sign_up"}}
-      </h3>
-      <iframe src="https://nomadgate.com/ext/su-frame/?ref=ngc-guest-gate-embed" height="150" width="400" referrerpolicy="unsafe-url" style="position:relative;border:0;width:100%;min-height:150px;"></iframe>
-    </div>
   {{/d-modal-body}}
 {{/if}}

@@ -1,10 +1,11 @@
 en:
   guest_gate:
-    title: "Please Sign Up!"
+    title: "Enjoying the discussion?"
     sign_up_email: "Sign Up with Email"
-    sign_up: "Sign Up"
-    log_in: "I already have an account"
+    sign_up: "sign up below:"
+    log_in: "Log in"
     or: "or"
+    iframe: "https://nomadgate.com/ext/su-frame/?ref=ngc-guest-gate-embed"
   custom_gate:
     big_text: "Custom Big text"
     little_text: "Custom Little text"
