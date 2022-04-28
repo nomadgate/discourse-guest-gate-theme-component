@@ -14,9 +14,9 @@
     {{/if}}
     <div>
       <h3>
-        <a href="/login">{{theme-i18n "guest_gate.log_in"}}</a>
-        <a href {{action "showLogin"}}>{{i18n 'log_in'}}</a> or sign up below:
+        <a {{action "showLogin"}}>{{theme-i18n "guest_gate.log_in"}}</a> or <a href="/signup">sign up</a> below:
       </h3>
+      <iframe src="https://nomadgate.com/ext/su-frame/?ref=ngc-guest-gate-embed" height="150" width="400" referrerpolicy="unsafe-url" style="position:relative;border:0;width:100%;min-height:150px;"></iframe>
     </div>
   {{/d-modal-body}}
   {{else}}
@@ -33,6 +33,5 @@
         <p>{{replace-emoji (i18n 'signup_cta.value_prop')}}</p>
       </div>
     {{/if}}
-    <iframe src="https://nomadgate.com/ext/su-frame/?ref=ngc-guest-gate-embed" height="150" width="400" referrerpolicy="unsafe-url" style="position:relative;border:0;width:100%;min-height:150px;"></iframe>
   {{/d-modal-body}}
 {{/if}}
