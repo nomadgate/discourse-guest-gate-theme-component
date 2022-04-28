@@ -36,29 +36,3 @@
     <iframe src="https://nomadgate.com/ext/su-frame/?ref=ngc-guest-gate-embed" height="150" width="400" referrerpolicy="unsafe-url" style="position:relative;border:0;width:100%;min-height:150px;"></iframe>
   {{/d-modal-body}}
 {{/if}}
-
-<div class="modal-footer">
-  {{#if ssoEnabled}}
-    {{d-button label=(theme-prefix 'guest_gate.log_in') action="showLogin"}}
-      &nbsp;&nbsp;or&nbsp;
-    {{d-button label=(theme-prefix 'guest_gate.sign_up') action="showCreateAccount"}}
-    {{else}}
-    {{#if (theme-setting 'use_gate_buttons') }}
-      {{#if (theme-setting 'redirect_to_home') }}
-        {{d-button class="btn-primary" label=(theme-prefix 'guest_gate.log_in') href="/login"}}
-        {{d-button label=(theme-prefix 'guest_gate.sign_up') href="/signup"}}
-        {{else}}
-        {{d-button class="btn-primary" label=(theme-prefix 'guest_gate.log_in') action="showLogin"}}
-        {{d-button label=(theme-prefix 'guest_gate.sign_up') action="showCreateAccount"}}
-      {{/if}}
-      {{else}}
-      {{#if (theme-setting 'redirect_to_home') }}
-        <a href="/login">{{theme-i18n "guest_gate.log_in"}}</a> |
-        <a href="/signup">{{theme-i18n "guest_gate.sign_up"}}</a>
-        {{else}}
-        <a href {{action "showLogin"}}>{{theme-i18n "guest_gate.log_in"}}</a> |
-        <a href {{action "showCreateAccount"}}>{{theme-i18n "guest_gate.sign_up"}}</a>
-      {{/if}}
-    {{/if}}
-  {{/if}}
-</div>
